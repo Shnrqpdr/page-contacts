@@ -1,15 +1,15 @@
 <template>
-  <home />
+  <add />
 </template>
 
 <script>
-import Home from "../components/Home";
+import Add from "../components/Add";
 
 export default {
-  name: "home-view",
+  name: "add-view",
 
   components: {
-    Home,
+    Add,
   },
 };
 </script>
