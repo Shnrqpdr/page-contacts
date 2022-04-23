@@ -1,35 +1,23 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
+    <v-app-bar app color="blue-grey" dark>
       <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+        <v-avatar>
+          <img src="https://i.imgur.com/2Bfi6qy.jpg" alt="John" />
+        </v-avatar>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
+        <div class="title">Agenda de Contatos</div>
       </div>
 
       <v-spacer></v-spacer>
 
       <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        href="https://github.com/Shnrqpdr/page-contacts"
         target="_blank"
         text
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+        <span class="mr-2">Repositório</span>
+        <v-icon x-large>mdi-github</v-icon>
       </v-btn>
     </v-app-bar>
 
@@ -40,11 +28,25 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 export default {
   name: "App",
 
   data: () => ({
     //
   }),
+  mounted() {
+    this.initialiseStore();
+  },
+  methods: {
+    ...mapMutations(["initialiseStore"]),
+  },
 };
 </script>
+<style scoped>
+.title {
+  font-size: 26px;
+  margin-left: 20px;
+  line-height: 22px !important;
+}
+</style>
