@@ -3,7 +3,7 @@
     <v-list subheader two-line>
       <div class="header">Agenda de Contatos</div>
 
-      <v-list-item v-for="folder in contatos" :key="folder.nome">
+      <v-list-item v-for="contato in contatos" :key="contato.nome">
         <v-list-item-avatar>
           <v-avatar>
             <img src="https://i.imgur.com/2Bfi6qy.jpg" />
@@ -11,9 +11,11 @@
         </v-list-item-avatar>
 
         <v-list-item-content>
-          <v-list-item-title v-text="folder.nome"></v-list-item-title>
+          <v-list-item-title v-text="contato.nome"></v-list-item-title>
 
-          <v-list-item-subtitle v-text="folder.email"></v-list-item-subtitle>
+          <v-list-item-subtitle
+            v-text="`${contato.email}, ${contato.contato}`"
+          ></v-list-item-subtitle>
         </v-list-item-content>
 
         <v-list-item-action>
