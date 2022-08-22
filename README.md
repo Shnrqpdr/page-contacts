@@ -1,5 +1,7 @@
 # page-contacts
 
+A simple single-page application for integration of Vuex and localStorage.
+
 ## Project setup
 ```
 npm install
